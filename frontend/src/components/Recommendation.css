@@ -1,0 +1,100 @@
+.recommendation-card {
+  height: 100%;
+  width: 100%;
+  /* Default Dark Background */
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.8));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.recommendation-card h3 {
+  margin: 0 0 20px 0;
+  font-size: 1rem;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.status-box {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.status-box p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.status-icon {
+  font-size: 1.2rem;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+/* --- COLOR THEMES (The Fix) --- */
+
+/* 1. Neutral (Default) */
+.recommendation-card.neutral {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.8));
+  border-color: var(--border);
+}
+.recommendation-card.neutral .status-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+}
+
+/* 2. Good (Green) - Changes BOTH Card and Box */
+.recommendation-card.good {
+  background: linear-gradient(135deg, rgba(6, 40, 30, 0.95), rgba(6, 60, 40, 0.6));
+  border-color: rgba(16, 185, 129, 0.3);
+}
+.recommendation-card.good .status-box {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+/* 3. Warning (Yellow) - Changes BOTH Card and Box */
+.recommendation-card.warning {
+  background: linear-gradient(135deg, rgba(66, 42, 0, 0.95), rgba(80, 50, 0, 0.6));
+  border-color: rgba(234, 179, 8, 0.4);
+}
+.recommendation-card.warning .status-box {
+  background: rgba(234, 179, 8, 0.1);
+  border: 1px solid rgba(234, 179, 8, 0.2);
+  color: #facc15;
+}
+
+/* 4. Danger (Red) - Changes BOTH Card and Box */
+.recommendation-card.danger {
+  background: linear-gradient(135deg, rgba(30, 10, 10, 0.95), rgba(45, 10, 10, 0.6));
+  border-color: rgba(239, 68, 68, 0.3);
+}
+.recommendation-card.danger .status-box {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}

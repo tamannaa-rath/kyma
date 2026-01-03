@@ -1,0 +1,121 @@
+.health-card {
+  height: 100%;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.health-card.healthy {
+  background: linear-gradient(135deg, rgba(6, 40, 30, 0.95), rgba(6, 60, 40, 0.6));
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #10b981;
+}
+
+.health-card.warning {
+  background: linear-gradient(135deg, rgba(66, 42, 0, 0.95), rgba(80, 50, 0, 0.6));
+  border-color: rgba(234, 179, 8, 0.4);
+  color: #eab308;
+}
+
+.health-card.warning .ring-progress {
+  stroke: #eab308;
+}
+
+.health-card.fault {
+  background: linear-gradient(135deg, rgba(30, 10, 10, 0.95), rgba(45, 10, 10, 0.6));
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.severity-badge-small {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: inherit;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.big-percentage {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 4px;
+  color: inherit;
+}
+
+.sub-label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.sub-label span {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.ring-container {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-ring circle {
+  fill: transparent;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.ring-bg {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+
+.health-card.healthy .ring-progress {
+  stroke: #10b981;
+}
+
+.health-card.fault .ring-progress {
+  stroke: #ef4444;
+}
+
+.ring-icon {
+  position: absolute;
+  background: rgba(0,0,0,0.4); 
+  width: 32px; 
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
